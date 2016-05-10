@@ -30,8 +30,8 @@ class LandmarksController < ApplicationController
     @landmark.update(params[:landmark])
 
     unless params[:owner][:name].empty?
-      @landmark.figure = Figure.find_or_create_by(name: params[:figure][:name])
-       @landmark.save
+      @landmark.figure = Figure.create(name: params[:figure][:name])
+      @landmark.save
     end
 
     redirect "/landmarks/#{@landmark.id}"
