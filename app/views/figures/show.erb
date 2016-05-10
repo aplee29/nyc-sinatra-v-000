@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Figure Show Page</title>
+</head>
+<body>
+  <h1><%= @figure.name %></h1>
+
+  <h3>Landmarks:</h3>
+  <% @figure.landmarks.each do |landmark| %>
+    <%= landmark.name %><br>
+  <% end %>
+
+  <h3>Titles:</h3>
+  <% @figure.titles.each do |title| %>
+    <%= title.name %><br>
+  <% end %>
+  <br>
+
+  <a class="button" href="/figures">Home</a>
+</body>
+</html>
