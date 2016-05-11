@@ -20,7 +20,8 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    Landmark.create(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
+    # Landmark.create(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
+    Landmark.create(params[:landmark])
     redirect "/landmarks"
   end
 
